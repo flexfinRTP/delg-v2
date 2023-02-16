@@ -29,7 +29,7 @@ export default function NFTGallery({}) {
     if (res.pageKey) {
       setPageKey(res.pageKey);
     } else {
-        setPageKey()
+        setPageKey(res.pageKey)
     }
     setIsloading(false);
   };

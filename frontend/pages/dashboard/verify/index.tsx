@@ -30,13 +30,7 @@ import {
     styled,
   } from "@chakra-ui/react";
   import Image from "next/image";
-  import Navbar from "@/components/Navbar";
-  import Footer from "@/components/Footer";
-  import { useDropzone } from "react-dropzone"
   import React, { useState } from "react";
-import Dropzone from 'react-dropzone'
-import { useWallet } from "../../../context/MetamaskProvider";
-import MetamaskConnectButton from "@/components/MetamaskConnectButton";
 import { QuestionIcon } from "@chakra-ui/icons";
 import { useForm } from "react-hook-form";
 import { Contract } from "ethers";
@@ -72,8 +66,6 @@ import { Contract } from "ethers";
   
     return (
       <div className="about">
-  
-        <Navbar />
 
         <div>
         <Container centerContent>
@@ -187,8 +179,6 @@ import { Contract } from "ethers";
         
         </Container>
         <br /><br />
-
-        <Footer />
       </div>
     );
   };
