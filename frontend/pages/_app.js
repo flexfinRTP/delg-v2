@@ -47,7 +47,7 @@ export { WagmiConfig, RainbowKitProvider };
 function MyApp({ Component, pageProps }) {
 	return (
 		<ChakraProvider>
-		<WagmiConfig client={wagmiClient}>
+			<WagmiConfig client={wagmiClient}>
 				<RainbowKitProvider
 					modalSize="compact"
 					initialChain={process.env.NEXT_PUBLIC_DEFAULT_CHAIN}
@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }) {
 						<Component {...pageProps} />
 					</MainLayout>
 				</RainbowKitProvider>
-		</WagmiConfig>
+			</WagmiConfig>
 		</ChakraProvider>
 	);
 }

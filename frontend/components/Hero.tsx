@@ -41,7 +41,7 @@ export default function CallToActionWithAnnotation() {
             <Text as={'span'} fontWeight={700} color={'blue.400'}>
             accessible, secure, profitable,
             </Text>
-            <Text>
+            <Text as={'span'}>
               Web3 data validation and data-sharing tools.
             </Text>
           </Heading>

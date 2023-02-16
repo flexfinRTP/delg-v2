@@ -11,17 +11,13 @@ import {
 } from "@chakra-ui/react";
 import agreement from "./agreement.jpg";
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Contact from "@/components/Contact";
-import SimpleThreeColumns from "@/components/ThreeColumns";
+import Hero from "../../components/Hero";
+import Contact from "../../components/Contact";
+import SimpleThreeColumns from "../../components/ThreeColumns";
 
 const About = () => {
   return (
     <div className="about">
-
-      <Navbar />
 
       <Hero />
 
@@ -37,9 +33,6 @@ const About = () => {
 
       </Container>
 
-
-      
-      <Footer />
     </div>
   );
 };

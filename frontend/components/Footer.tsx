@@ -76,7 +76,7 @@ export default function Footer() {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>© 2023 DataLink DAO. All rights reserved</Text>
+          <Text>© 2023 DELG (Digital Engineering Licensing Group). All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
               <FaTwitter />

@@ -16,9 +16,8 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
-import Navbar from "@/components/Navbar";
 import { useRouter } from "next/router";
-import { useWallet } from "@/context/MetamaskProvider";
+// import { useWallet } from "@/context/MetamaskProvider";
 import { Column, useTable } from "react-table";
 
 type Props = {
@@ -108,7 +107,7 @@ const CustomTable: React.FC<Props> = ({ columns, data }) => {
 };
 
 const Manage = () => {
-  const { contractPublisher } = useWallet();
+  const { contractPublisher } = "0x"
   const columns = React.useMemo(
     () => [
       {
@@ -178,35 +177,34 @@ const Manage = () => {
   );
   const router = useRouter();
 
-  console.log("____________contractPublisher", contractPublisher);
-  if (!contractPublisher) {
-    return <div >
-      <br />
-      <p style={{ padding: "1em", color: "red", fontWeight:"bolder", fontSize: "28px"}}>Please connect your wallet to the Filecoin Hyperspace Testnet to continue.</p>
-      <a style={{ padding: "1.5em", color: "blue", fontStyle: "italic", fontWeight:"bold", fontSize: "20px"}} href="https://chainlist.org/chain/3141">Filecoin - Hyperspace testnet RPC and Chain settings | Chainlist</a>
-    </div>;
-  }
+  // console.log("____________contractPublisher", contractPublisher);
+  // if (!contractPublisher) {
+  //   return <div >
+  //     <br />
+  //     <p style={{ padding: "1em", color: "red", fontWeight:"bolder", fontSize: "28px"}}>Please connect your wallet to the Filecoin Hyperspace Testnet to continue.</p>
+  //     <a style={{ padding: "1.5em", color: "blue", fontStyle: "italic", fontWeight:"bold", fontSize: "20px"}} href="https://chainlist.org/chain/3141">Filecoin - Hyperspace testnet RPC and Chain settings | Chainlist</a>
+  //   </div>;
+  // }
 
   return (
     <>
-      <Navbar />
       <Box mt={10}>
         <Container maxW="100%">
-          <Box bg="#3979d9" color="white" mb={8}>
+          <Box bg="green.600" color="white" mb={8}>
             <Text fontSize="6xl" style={{ textAlign: "center" }}>
-              DataLink Publisher Dashboard
+              DELG Publisher Dashboard
             </Text>
           </Box>
           <Flex>
             <Box p="4">
-              <Heading as="h2" size="2xl" color={'blue.500'} fontWeight={700}>
+              <Heading as="h2" size="2xl" color={'green.600'} fontWeight={700}>
                 Overview
               </Heading>
 
               <br /><br />
 
               <Heading as="h2" size="xl" color={'gray.700'} fontWeight={500}>
-                Harvard Business School
+                Texas Engineering Institute
               </Heading>
             </Box>
             <Spacer />
@@ -216,16 +214,16 @@ const Manage = () => {
                 size="md"
                 height="48px"
                 width="200px"
-                bg={'blue.400'}
+                bg={'green.400'}
                 color={'white'}
                 boxShadow={
                   '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
                 }
                 _hover={{
-                  bg: 'blue.500',
+                  bg: 'green.500',
                 }}
                 _focus={{
-                  bg: 'blue.500',
+                  bg: 'green.500',
                 }}
                 onClick={() => router.push("/dashboard/create-nft")}
               >

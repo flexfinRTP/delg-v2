@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { camelCaseToTitleCase } from "@/utils/toTitleCase";
 import { Text, Container, Heading, Box } from "@chakra-ui/react";
 import { GetServerSidePropsContext } from "next";
@@ -37,7 +35,6 @@ const Details: React.FC<{ id: string }> = (props) => {
 
   return (
     <>
-      <Navbar />
       <Container>
         <Text color={'blue.600'} fontWeight={800} fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>NFT Details</Text>
         <br />
@@ -48,7 +45,6 @@ const Details: React.FC<{ id: string }> = (props) => {
           {textLines}
         </Box>
       </Container>
-      <Footer />
     </>
   );
 };

@@ -1,9 +1,7 @@
 import { Box } from "@chakra-ui/react";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Contact from "@/components/Contact";
+import Contact from "../../components/Contact";
 
-const Dashboard = () => {
+const Help = () => {
   return (
     <Box>
       <Contact />
@@ -11,4 +9,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Help;

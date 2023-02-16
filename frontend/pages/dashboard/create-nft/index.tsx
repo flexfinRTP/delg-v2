@@ -1,8 +1,5 @@
-import Navbar from "@/components/Navbar";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useWallet } from "../../../context/MetamaskProvider";
-import MetamaskConnectButton from "@/components/MetamaskConnectButton";
 import {
   Card,
   CardBody,
@@ -28,6 +25,7 @@ import axios from "axios";
 import { QuestionIcon } from "@chakra-ui/icons";
 import { useForm } from "react-hook-form";
 import { NFTStorage, File } from "nft.storage";
+import { unknown } from "zod";
 
 const StyledInputGroup = styled(InputGroup, {
   baseStyle: {
@@ -44,7 +42,7 @@ const StyledFormLabel = styled(FormLabel, {
 });
 
 const Createnft = () => {
-  const { contractPublisher } = useWallet();
+  const { contractPublisher } = "0x";
   console.log(
     "🚀 ~ file: index.tsx:48 ~ Createnft ~ contractPublisher",
     contractPublisher
@@ -126,7 +124,6 @@ const Createnft = () => {
       "https://api.pinata.cloud/pinning/pinFileToIPFS",
       updataData,
       {
-        maxContentLength: "Infinity",
         headers: {
           "Content-Type": "multipart/form-data",
           pinata_api_key: "83d0fe9284cd9725ed27",
@@ -145,7 +142,6 @@ const Createnft = () => {
       "https://api.pinata.cloud/pinning/pinFileToIPFS",
       updataData,
       {
-        maxContentLength: "Infinity",
         headers: {
           "Content-Type": "multipart/form-data",
           pinata_api_key: "83d0fe9284cd9725ed27",
@@ -159,11 +155,9 @@ const Createnft = () => {
 
   return (
     <>
-      <Navbar />
-
       <Box p={4}>
-        <Text fontSize="4xl" color={'blue.500'} fontWeight={700}>
-          DataLink DAO Data Standards
+        <Text fontSize="4xl" color={'green.500'} fontWeight={700}>
+          Digital Engineering License Group - Data Standards
         </Text>
 
         {/* <Text fontSize="2xl">
