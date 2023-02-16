@@ -15,6 +15,7 @@ import {
 } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
+import { ChakraProvider } from "@chakra-ui/react";
 import MainLayout from "../layout/mainLayout";
 
 const { chains, provider } = configureChains(
@@ -45,17 +46,19 @@ const wagmiClient = createClient({
 export { WagmiConfig, RainbowKitProvider };
 function MyApp({ Component, pageProps }) {
 	return (
+		<ChakraProvider>
 		<WagmiConfig client={wagmiClient}>
-			<RainbowKitProvider
-				modalSize="compact"
-				initialChain={process.env.NEXT_PUBLIC_DEFAULT_CHAIN}
-				chains={chains}
-			>
-				<MainLayout>
-					<Component {...pageProps} />
-				</MainLayout>
-			</RainbowKitProvider>
+				<RainbowKitProvider
+					modalSize="compact"
+					initialChain={process.env.NEXT_PUBLIC_DEFAULT_CHAIN}
+					chains={chains}
+					>
+					<MainLayout>
+						<Component {...pageProps} />
+					</MainLayout>
+				</RainbowKitProvider>
 		</WagmiConfig>
+		</ChakraProvider>
 	);
 }
 
