@@ -11,19 +11,10 @@ import {
   } from "@chakra-ui/react";
   import agreement from "./agreement.jpg";
   import Image from "next/image";
-  import Navbar from "@/components/Navbar";
-  import Footer from "@/components/Footer";
-  import Hero from "@/components/Hero";
-  import Contact from "@/components/Contact";
-  import SimpleThreeColumns from "@/components/ThreeColumns";
   
   const Rewards = () => {
     return (
       <div className="about">
-  
-        <Navbar />
-  
-        <Hero />
   
         <Container maxW="80%" centerContent>
           
@@ -35,9 +26,6 @@ import {
   
         </Container>
   
-  
-        
-        <Footer />
       </div>
     );
   };

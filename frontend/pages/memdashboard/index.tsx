@@ -7,7 +7,7 @@ const MemberDashboard = () => {
         <br /><br />
 
         <Container maxW="80%" centerContent>
-            <NFTGallery />
+            {/* <NFTGallery /> */}
         </Container>
 
     </Box>

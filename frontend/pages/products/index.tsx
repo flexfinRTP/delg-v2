@@ -1,10 +1,8 @@
-import Navbar from "@/components/Navbar";
 import { Card, CardHeader, CardBody, Heading } from "@chakra-ui/react";
 
 const Products = () => {
   return (
     <div>
-      <Navbar />
       <div className="DataDAO">
         <Card align="center">
           <CardHeader>

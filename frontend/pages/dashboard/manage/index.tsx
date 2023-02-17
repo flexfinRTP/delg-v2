@@ -19,20 +19,11 @@ import {
 import { useRouter } from "next/router";
 // import { useWallet } from "@/context/MetamaskProvider";
 import { Column, useTable } from "react-table";
+import { any } from "ramda";
 
 type Props = {
-  columns: Column<{
-    Header: any;
-    accessor: any;
-  }>[];
-  data: {
-    nft: any;
-    type: any;
-    status: any;
-    expires: any;
-    details: JSX.Element;
-    burn: JSX.Element;
-  }[];
+  columns: any;
+  data: any;
 };
 
 const CustomTable: React.FC<Props> = ({ columns, data }) => {
@@ -81,7 +72,7 @@ const CustomTable: React.FC<Props> = ({ columns, data }) => {
                             colorScheme="#f8f8f800"
                             onClick={() =>
                               router.push(
-                                `/dashboard/manage/burn/${cell.row.original.id}`
+                                `/dashboard/manage/`
                               )
                             }
                           >
@@ -107,7 +98,7 @@ const CustomTable: React.FC<Props> = ({ columns, data }) => {
 };
 
 const Manage = () => {
-  const { contractPublisher } = "0x"
+  // const { contractPublisher } = "0x"
   const columns = React.useMemo(
     () => [
       {
