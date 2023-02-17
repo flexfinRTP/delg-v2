@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract CertFactory is ERC721, ERC721Burnable, Pausable, ERC721Votes, AccessControl, ERC721Enumerable, ERC721URIStorage {
+contract DelFactory is ERC721, ERC721Burnable, Pausable, ERC721Votes, AccessControl, ERC721Enumerable, ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIdCounter;
 
@@ -18,7 +18,7 @@ contract CertFactory is ERC721, ERC721Burnable, Pausable, ERC721Votes, AccessCon
         bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
    
 
-    constructor()ERC721("CertFactory","CER")EIP712("CertFactory", "1"){
+    constructor()ERC721("DelFactory","DEL")EIP712("DelFactory", "1"){
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(PAUSER_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);

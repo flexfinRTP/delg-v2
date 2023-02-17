@@ -4,14 +4,14 @@
 	"private": true,
 	"scripts": {
 		"build": "npx hardhat compile",
-		"deploy-testnet": "npx hardhat run ./scripts/CertFactory_deploy.js --network ETH_GOERLI",
-		"deploy": "npx hardhat run ./scripts/CertFactory_deploy.js --network ETH_MAINNET",
+		"deploy-testnet": "npx hardhat run ./scripts/DelFactory_deploy.js --network ETH_GOERLI",
+		"deploy": "npx hardhat run ./scripts/DelFactory_deploy.js --network ETH_MAINNET",
 		"node": "npx hardhat node",
-		"deploy-local": "npx hardhat run ./scripts/CertFactory_deploy.js --network localhost"
+		"deploy-local": "npx hardhat run ./scripts/DelFactory_deploy.js --network localhost"
 	},
 	"dependencies": {
-		"dotenv": "^16.0.3",
-		"@openzeppelin/contracts": "^4.8.1"
+		"@openzeppelin/contracts": "^4.8.1",
+		"dotenv": "^16.0.3"
 	},
 	"devDependencies": {
 		"@nomicfoundation/hardhat-toolbox": "^2.0.1",

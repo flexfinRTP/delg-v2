@@ -181,7 +181,9 @@ const Manage = () => {
     <>
       <Box mt={10}>
         <Container maxW="100%">
-          <Box bg="green.600" color="white" mb={8} padding={8}>
+          <Box bg="green.600" color="white" mb={8} padding={8} boxShadow={
+                  '1px 2px 25px -5px rgb(66 153 225 / 48%), 0 20px 20px -5px rgb(66 153 225 / 43%)'
+                }>
             <Text fontSize="6xl" style={{ textAlign: "center" }}>
               DEL Publisher Dashboard
             </Text>
