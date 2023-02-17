@@ -1,4 +1,3 @@
-// import { camelCaseToTitleCase } from "@/utils/toTitleCase";
 import { Text, Container, Heading, Box } from "@chakra-ui/react";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
