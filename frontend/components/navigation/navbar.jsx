@@ -47,7 +47,7 @@ export default function Navbar() {
 						<Link href="/dao">Join The DEL</Link>
 						<Link href="/dashboard/manage">Manage</Link>
 						<Link href="/dashboard/create-nft">Create</Link>
-						<Link href="/memdashboard">NFT Gallery</Link>
+						<Link href="/">NFT Gallery</Link>
 						{/* <Link href="/dashboard/verify">Verify</Link>
 						<Link href="/rewards">Rewards</Link> */}
 					  </>

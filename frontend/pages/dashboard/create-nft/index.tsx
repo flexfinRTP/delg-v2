@@ -160,9 +160,6 @@ const Createnft = () => {
           Digital Engineering License Group - Data Standards
         </Text>
 
-        {/* <Text fontSize="2xl">
-          At DataLink we put data security first.
-        </Text> */}
         <br />
         <Text fontSize="2xl">
           After tokenization, your data will have new value streams unlocked

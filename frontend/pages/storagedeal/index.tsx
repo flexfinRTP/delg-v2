@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import {
   Text,
   Container,
@@ -36,7 +34,6 @@ const StorageOnboard: React.FC = () => {
 
   return (
     <>
-      <Navbar />
       <Container display="flex" flexDirection="column" rowGap={10}>
         <Heading>Welcome Back, Publisher!</Heading>
         <Text color={'gray.700'} fontWeight={500} fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}>
@@ -78,12 +75,11 @@ const StorageOnboard: React.FC = () => {
           </StyledInputGroup>
           <br />
           <Text>Automate  {'[X]'}</Text>
-          <Button colorScheme="blue" marginTop={10} width="100%" type="submit" onClick={() => router.push("/storageplansuccess")}>
+          <Button colorScheme="green" marginTop={10} width="100%" type="submit" onClick={() => router.push("/storageplansuccess")}>
             Create Storage Plan
           </Button>
         </form>
       </Container>
-      <Footer />
     </>
   );
 };
