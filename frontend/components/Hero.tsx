@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import {
   Box,
+  Flex,
   Heading,
   Container,
   Text,
@@ -12,6 +13,8 @@ import {
   createIcon,
 } from '@chakra-ui/react';
 import { useRouter } from "next/router";
+import Image from "next/image";
+import DEL from "../public/del-r.png";
 
 export default function CallToActionWithAnnotation() {
   const router = useRouter();
@@ -26,34 +29,56 @@ export default function CallToActionWithAnnotation() {
           rel="stylesheet"
         />
       </Head>
+    
+      <Container centerContent>
+				  <Link
+					href="#"
+				  >
+					<Image src={DEL} alt="logo" width={280} height={280} />
+				  </Link>
+				</Container>
 
       <Container maxW={'3xl'}>
         <Stack
           as={Box}
           textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
+          spacing={{ base: 10, md: 20 }}
+          py={{ base: 10, md: 20 }}>
           <Heading
             fontWeight={700}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
             Buidling <br />
-            <Text as={'span'} fontWeight={700} color={'blue.400'}>
-            accessible, secure, profitable,
+            <Text as={'span'} fontWeight={700} color={'green.500'}>
+            accessible, secure, efficient, 
             </Text>
             <Text as={'span'}>
-              Web3 data validation and data-sharing tools.
+            engineering licenses.
             </Text>
           </Heading>
-          <Text color={'gray.600'} fontWeight={500} fontSize={{ base: 'l', sm: 'xl', md: '2xl' }}>
-            Welcome to the world of DataLink DAO, where data ownership and control are returned to the hands of the people. Our mission is to empower individuals and businesses to take control of their data and use it to their advantage through the power of zero-knowledge verification, monetized data sharing, and user-owned data.
-            <br /><br />
-            DataLink DAO will revolutionize the way we think about data. With zero-knowledge verification, we ensure that your data remains private and secure, while still allowing for monetization opportunities. And with user-owned data, individuals and businesses can take control of their data and use it to drive growth and success.
-            <br /><br />
-            Data is the lifeblood of the digital economy, and its time for us to take control of it. 
-            <br /><br />
-            Join us on this journey as we explore the benefits of DataLink DAO and how it can change the way we think about data. This is the future of data privacy and ownership, and we are excited to share it with you.
-          </Text>
+          <Text color={'gray.600'} fontWeight={500} fontSize={{ base: 'xl', sm: 'xl', md: '2xl' }}>
+          There a need for a digital engineering license. These days, few engineering documents are being provided in hardcopy, paper format. 
+          <br /><br />
+          It's common for construction drawings, engineering studies and design models to be sent to clients and reviewers in a digital format. 
+          Most likely they are sent as a PDF or in some cases a copy of the data from the model used for the analysis is sent. 
+          <br /><br />
+          The engineering seal is often a scan of a signed printed copy, a drawing created with CAD with the signature added manually, or an image added to a PDF using the signature certification tool. The certified signature method can't be altered by someone else after it's created. 
+          <br /><br /><br /><br />
+          This is the best option since the signature is secured. A seal that is native to the digital environment could be attached to the file metadata instead of just as an image. Data would include details about seal usage and help keep track of revisions. 
+          <br /><br />
+          The data stored with the seal would provide assurance that it was used by the licensed engineer. Overall, it would be a more convenient method of sealing an engineering document than the current methods. 
+          Now is a good time to think about using technology to modernize the engineering seal.
+        </Text>
+        <Text color={'gray.700'} fontWeight={500} fontSize={{ base: 'xl', sm: 'xl', md: '2xl' }}>
+          The engineering seal is often a scan of a signed printed copy, a drawing created with CAD with the signature added manually, or an image added to a PDF using the signature certification tool. The certified signature method can't be altered by someone else after it's created. 
+          <br /><br />
+          This is the best option since the signature is secured. A seal that is native to the digital environment could be attached to the file metadata instead of just as an image. Data would include details about seal usage and help keep track of revisions. 
+        </Text>
+        <Text color={'gray.800'} fontWeight={500} fontSize={{ base: 'xl', sm: 'xl', md: '2xl' }}>
+          The data stored with the seal would provide assurance that it was used by the licensed engineer. Overall, it would be a more convenient method of sealing an engineering document than the current methods. 
+          <br /><br /><br /><br />
+          Now is a good time to think about using technology to modernize the engineering seal.
+        </Text>
           <Stack
             direction={'column'}
             spacing={3}
@@ -63,16 +88,18 @@ export default function CallToActionWithAnnotation() {
             <Button
               fontSize='24px'
               colorScheme={'blue'}
-              bg={'blue.400'}
+              bg={'green.500'}
               rounded={'full'}
               px={12}
               py={8}
               onClick={() => router.push("/dao")}
               _hover={{
-                bg: 'blue.500',
+                bg: 'green.600',
               }}>
-              Join the DAO
+              Join the DEL
             </Button>
+            
+            
             {/* <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
               Learn more
             </Button> */}

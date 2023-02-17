@@ -10,7 +10,7 @@ import {
 	Stack,
 	useColorMode,
   } from "@chakra-ui/react";
-  import DEL from "../../public/del.jpg";
+  import DLOGO from "../../public/logo-rg.png";
   import Image from "next/image";
   import { useRouter } from "next/router";
 
@@ -28,7 +28,7 @@ export default function Navbar() {
 				  <Link
 					href="/"
 				  >
-					<Image src={DEL} alt="logo" width={60} height={60} />
+					<Image src={DLOGO} alt="logo" width={60} height={60} />
 				  </Link>
 				</Box>
 		
@@ -44,7 +44,7 @@ export default function Navbar() {
 					  <>
 						<Link href="/">Home</Link>
 						<Link href="/about">About</Link>
-						<Link href="/dao">Join The DELG</Link>
+						<Link href="/dao">Join The DEL</Link>
 						<Link href="/dashboard/manage">Manage</Link>
 						<Link href="/dashboard/create-nft">Create</Link>
 						<Link href="/memdashboard">NFT Gallery</Link>

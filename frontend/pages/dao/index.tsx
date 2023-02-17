@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import DalDao2 from "../../public/daldao2.png";
+import DEL from "../../public/del-r.png";
 import a1920 from "../../public/a1920.jpg";
 import w79 from "../../public/w79.jpg";
 
@@ -22,8 +22,8 @@ const JoinDao = () => {
   return (
     <>
         <Container>
-          <Image src={DalDao2} alt='img' width={800} height={800}/>
-
+          <Image src={DEL} alt='img' width={800} height={800}/>
+          <br /><br /><br /><br />
           <Card
             alignItems="center"
             justifyContent="center"
@@ -35,16 +35,16 @@ const JoinDao = () => {
             w="100%"
             mx="auto"
           >
-          <Heading marginTop={10} marginBottom={10} fontSize="4xl" color="blue.600">Join DataLink DAO!</Heading>
+          <Heading marginTop={10} marginBottom={10} fontSize="4xl" color="green.600">Join the DEL!</Heading>
 
           <Box display="flex" columnGap={10} marginBottom={10}>
             <Button
-              bg="red"
+              bg="green"
               color="white"
               alignItems="center"
               justifyContent="center"
               boxShadow='dark-lg' p='6' rounded='lg'
-              colorScheme='red' 
+              colorScheme='green' 
               variant='solid'
               onClick={() => router.push("/dao/publisher")}
             >
@@ -61,7 +61,7 @@ const JoinDao = () => {
               variant='solid'
               onClick={() => router.push("/dao")}
             >
-              Join as DAO Member
+              Join as DEL Member
             </Button>
           </Box>
         </Card>
@@ -82,9 +82,7 @@ const JoinDao = () => {
               mx="auto"
             >
               {" "}
-              The DataLink DAO will monetize anonymous data-sharing, and provide
-              a powerful tokenization platform for credentials, documents, and
-              other data.
+              Right now, engineers must make a separate application using the same information in every state they want to be licensed. 
             </Heading>
             <Text
               fontSize="2xl"
@@ -93,7 +91,7 @@ const JoinDao = () => {
               alignItems="center"
               mx="auto"
             >
-              For the information age to move forward, there needs to a be decentralized truth engine that can verify data, documents, identity, by anonymous, secure processes. 
+              The engineer has to interact with each state licensing agency not just to acquire but also maintain their licenses. 
             </Text>
             <Text
               fontSize="2xl"
@@ -102,7 +100,7 @@ const JoinDao = () => {
               alignItems="center"
               mx="auto"
             >
-              Identities can easily be forged and some that would have big social and monetary impact are medical doctors, lawyers, judges, or any other position that involves high trust in the entities’ expertise.
+              A digital engineering license would be issued once. Details about which states the engineer is licensed in would be associated with the license and accessible to other engineers within the system. 
             </Text>
             <Text
               fontSize="2xl"
@@ -111,7 +109,16 @@ const JoinDao = () => {
               alignItems="center"
               mx="auto"
             >
-              There is no incentive for keeping your data safe for these big companies that initially collect the data. With DataLink DAO’s incentivization model, organizations and users are rewarded for participating and providing value to the DAO.
+              When an engineer wants to become licensed in another state, they would authorize access to their work records and personal information to the licensing agency for approval. Because the records are consistent, the engineer can apply to multiple agencies at the same time. 
+            </Text>
+            <Text
+              fontSize="2xl"
+              marginTop="5rem"
+              w="100%"
+              alignItems="center"
+              mx="auto"
+            >
+             This would simplify the process for engineers who need to become licensed quickly for work. 
             </Text>
           </CardHeader>
         </Card>
@@ -129,7 +136,7 @@ const JoinDao = () => {
               mx="auto"
             >
               {" "}
-              Data collected about you, should be owned by you. 
+              One way to make this work would be to create an NFT that is unique to each engineer. 
             </Heading>
             <Text
               fontSize="2xl"
@@ -138,7 +145,8 @@ const JoinDao = () => {
               alignItems="center"
               mx="auto"
             >
-              Imagine a database of files and documents across the internet that you know to be true. Amongst the sea of fakers and bots out in the digital world, verified data that has a digital stamp of truth that any requestor can verify themselves easily and instantly.
+              The issuing organization would be the smart contract that maintains the engineers record. Every instance where the engineer seals a project would be added to the record as a newly minted NFT. 
+              The engineer's work portfolio would be a set of NFTs containing meta data for the engineering design that they sealed.
             </Text>
             <Text
               fontSize="2xl"
@@ -147,7 +155,7 @@ const JoinDao = () => {
               alignItems="center"
               mx="auto"
             >
-              DataLink is that stamp.
+              As they do more work, their portfolio grows, and people with access to the system can view their experience. The work record would always be current since the NFT updates with each use.
             </Text>
           </CardHeader>
         </Card>

@@ -14,7 +14,7 @@ import {
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import DEL from "../public/del.jpg";
+import DEL from "../public/del-r.png";
 import { useRouter } from "next/router";
 import NFTGallery from "../components/nftGallery";
 
@@ -45,15 +45,15 @@ export default function Home() {
         <br /><br /><br />
 
         <Text fontSize="6xl" color='green.600' as='b'>
-        Learn more about the DELG!
+        Learn more about the DEL!
         </Text>
 
         <br /><br />
 
         <Button
-          bg="green.500"
+          bg="green.600"
           color="white"
-          colorScheme='messenger' 
+          colorScheme='green' 
           variant='solid'
           w="25%"
           gap='4'
