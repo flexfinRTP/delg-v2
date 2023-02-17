@@ -1,8 +1,8 @@
-// import { useState } from "react";
-// import styles from "../styles/NftGallery.module.css";
-// import { useAccount } from "wagmi";
+import { useState } from "react";
+import styles from "../styles/NftGallery.module.css";
+import { useAccount } from "wagmi";
 
-// export default function NFTGallery({}) {
+export default function NFTGallery({}) {
 //   const [nfts, setNfts] = useState();
 //   const [walletOrCollectionAddress, setWalletOrCollectionAddress] = useState();
 //   const [isSearchWalletNfts, setIsSearchWalletNfts] = useState(true);
@@ -156,4 +156,4 @@
 //       </div>
 //     </div>
 //   );
-// }
+}
