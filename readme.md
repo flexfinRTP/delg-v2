@@ -14,6 +14,14 @@ One way to make this work would be to create an NFT that is unique to each engin
 
 Would you as an engineer use a tool like this?
 
+## Preview
+
+![DEL1](./frontend/public/DEL_preview1.jpg)
+![DEL3](./frontend/public/DEL_preview3.jpg)
+![DEL2](./frontend/public/DEL_preview2.jpg)
+![DEL4](./frontend/public/DEL_preview4.jpg)
+![DEL5](./frontend/public/DEL_preview5.jpg)
+
 ## Roadmap
 
 Stay Tuned...

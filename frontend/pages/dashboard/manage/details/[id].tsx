@@ -4,18 +4,13 @@ import { GetServerSidePropsContext } from "next";
 import React from "react";
 
 const data = {
-  studentId: "123456",
-  walletId: "0x1234567890",
-  documentType: "Transcript",
-  name: "John Doe",
-  degree: "Bachelors",
-  major: "Computer Science",
-  minor: "Mathematics",
-  graduationDate: "2021-05-01",
-  gpa: "3.5",
-  diploma: "D12301230",
-  diplomaDate: "2021-05-01",
-  diplomaVerification: "Yes",
+  engineerId: "0930023",
+  walletId: "0x4BC425f5bA8d950d3C08B668A4a38c4FEF4B575e",
+  documentType: "Parks and Recreation",
+  name: "Alice Johnson",
+  reviewDate: "2022-11-11",
+  documentNumber: "D12301230",
+  engineeringVerification: "Yes",
 } as Record<string, string>;
 
 const Details: React.FC<{ id: string }> = (props) => {
@@ -36,11 +31,13 @@ const Details: React.FC<{ id: string }> = (props) => {
   return (
     <>
       <Container>
-        <Text color={'blue.600'} fontWeight={800} fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>NFT Details</Text>
+        <Text color={'green.600'} fontWeight={800} fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>NFT Details</Text>
         <br />
         <Heading marginBottom={10} fontSize={{ base: 'xl', sm: 'xl', md: '2xl' }}>
-          NFT/Campaign Name
+          NFT/Document Name
         </Heading>
+        <Text fontWeight={600} fontSize={20}>City of Austin - Redwood Ave Expansion</Text>
+        <br /><br />
         <Box display="flex" flexDirection="column" rowGap={3}>
           {textLines}
         </Box>

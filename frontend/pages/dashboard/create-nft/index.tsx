@@ -174,11 +174,11 @@ const Createnft = () => {
             Upload csv with following fields to match:
           </Text>
 
-          <Button colorScheme="twitter" isDisabled>
+          <Button colorScheme="green" isDisabled>
             Download Template
           </Button>
 
-          <Button colorScheme="twitter" isDisabled>
+          <Button colorScheme="green" isDisabled>
             Upload CSV file
           </Button>
         </Flex>
@@ -191,7 +191,7 @@ const Createnft = () => {
           <Container>
             <FormControl p={1}>
               <Flex as='b' alignContent="center" boxShadow='dark-lg' p='4' rounded='md'>
-                <label htmlFor="formFileImage">+ Upload Diploma Image</label>
+                <label htmlFor="formFileImage">+ Upload Engineering Plan</label>
               </Flex>
               <input
                 type="file"
@@ -207,7 +207,7 @@ const Createnft = () => {
 
             <FormControl p={1}>
               <Flex as='b' alignContent="center" boxShadow='dark-lg' p='4' rounded='md'>
-                <label htmlFor="formFileTranscript">+ Upload Transcripts</label>
+                <label htmlFor="formFileTranscript">+ Upload Supporting Documents</label>
               </Flex>
               <input
                 type="file"
@@ -223,15 +223,15 @@ const Createnft = () => {
 
             <StyledInputGroup>
               <StyledFormLabel>
-                <Text>Student ID</Text>
+                <Text>Engineer ID</Text>
                 <Tooltip
                   hasArrow
-                  label="A unique identifier for the student, such as a university-issued
-          student ID number."
+                  label="A unique identifier for the engineer, such as a group-issued
+          engineer ID number."
                   bg="gray.100"
                   color="black"
                 >
-                  <QuestionIcon color="blue.200" />
+                  <QuestionIcon color="green.200" />
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("studentId")} />
@@ -246,7 +246,7 @@ const Createnft = () => {
                   bg="gray.300"
                   color="black"
                 >
-                  <QuestionIcon color="blue.200" />
+                  <QuestionIcon color="green.200" />
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("walletId")} />
@@ -257,15 +257,15 @@ const Createnft = () => {
                 <Text>Document Type</Text>
                 <Tooltip
                   hasArrow
-                  label="Type of data or document being tokenized."
+                  label="Type of engineering document being tokenized."
                   bg="gray.300"
                   color="black"
                 >
-                  <QuestionIcon color="blue.200" />
+                  <QuestionIcon color="green.200" />
                 </Tooltip>
               </StyledFormLabel>
               <Select {...register("documentType")}>
-                <option value="diploma">Diploma</option>
+                <option value="diploma">Engineer Plan</option>
                 <option value="certification">Certification</option>
                 <option value="license">License</option>
                 <option value="other">Other</option>
@@ -281,28 +281,28 @@ const Createnft = () => {
                   bg="gray.300"
                   color="black"
                 >
-                  <QuestionIcon color="blue.200" />
+                  <QuestionIcon color="green.200" />
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("name")} />
             </StyledInputGroup>
-
+{/* 
             <StyledInputGroup>
               <StyledFormLabel>
-                <Text>Degree</Text>
+                <Text>Type</Text>
                 <Tooltip
                   hasArrow
-                  label="The student's degree, such as Bachelor of Science or Master of Arts."
+                  label="Type of engineering document being tokenized."
                   bg="gray.300"
                   color="black"
                 >
-                  <QuestionIcon color="blue.200" />
+                  <QuestionIcon color="green.200" />
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("degree")} />
-            </StyledInputGroup>
+            </StyledInputGroup> */}
 
-            <StyledInputGroup>
+            {/* <StyledInputGroup>
               <StyledFormLabel>
                 <Text>Major</Text>
                 <Tooltip
@@ -315,8 +315,8 @@ const Createnft = () => {
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("major")} />
-            </StyledInputGroup>
-
+            </StyledInputGroup> */}
+{/* 
             <StyledInputGroup>
               <StyledFormLabel>
                 <Text>Minor</Text>
@@ -330,24 +330,24 @@ const Createnft = () => {
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("minor")} />
-            </StyledInputGroup>
+            </StyledInputGroup> */}
 
             <StyledInputGroup>
               <StyledFormLabel>
-                <Text>Graduation Date</Text>
+                <Text>Review Date</Text>
                 <Tooltip
                   hasArrow
-                  label="The date the student graduated."
+                  label="The date the plan needs to be reviewed by."
                   bg="gray.300"
                   color="black"
                 >
-                  <QuestionIcon color="blue.200" />
+                  <QuestionIcon color="green.200" />
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("graduationDate")} />
             </StyledInputGroup>
 
-            <StyledInputGroup>
+            {/* <StyledInputGroup>
               <StyledFormLabel>
                 <Text>GPA</Text>
                 <Tooltip
@@ -360,24 +360,24 @@ const Createnft = () => {
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("gpa")} />
-            </StyledInputGroup>
+            </StyledInputGroup> */}
 
             <StyledInputGroup>
               <StyledFormLabel>
-                <Text>Diploma #</Text>
+                <Text>Document #</Text>
                 <Tooltip
                   hasArrow
-                  label=" A unique identifier for the diploma, such as a serial number."
+                  label=" A unique identifier for the document, such as a serial number."
                   bg="gray.300"
                   color="black"
                 >
-                  <QuestionIcon color="blue.200" />
+                  <QuestionIcon color="green.200" />
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("diploma")} />
             </StyledInputGroup>
 
-            <StyledInputGroup>
+            {/* <StyledInputGroup>
               <StyledFormLabel>
                 <Text>Diploma Issued Date</Text>
                 <Tooltip
@@ -390,19 +390,19 @@ const Createnft = () => {
                 </Tooltip>
               </StyledFormLabel>
               <Input {...register("diplomaDate")} />
-            </StyledInputGroup>
+            </StyledInputGroup> */}
 
             <StyledInputGroup>
               <StyledFormLabel>
-                <Text>Diploma Verification</Text>
+                <Text>Engineering Verification</Text>
                 <Tooltip
                   hasArrow
-                  label="A flag indicating whether the diploma has been
+                  label="A flag indicating whether the engineering doucment has been
           verified as authentic."
                   bg="gray.300"
                   color="black"
                 >
-                  <QuestionIcon color="blue.200" />
+                  <QuestionIcon color="green.200" />
                 </Tooltip>
               </StyledFormLabel>
               <Select {...register("diplomaVerification")}>
@@ -411,7 +411,7 @@ const Createnft = () => {
               </Select>
             </StyledInputGroup>
 
-            <Button colorScheme="twitter" width="100%" marginTop={10} onClick={handleSubmit(onSubmit)}>
+            <Button colorScheme="green" width="100%" marginTop={10} onClick={handleSubmit(onSubmit)}>
               Create NFT
             </Button>
           </Container>

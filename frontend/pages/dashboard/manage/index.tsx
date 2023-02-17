@@ -46,7 +46,7 @@ const CustomTable: React.FC<Props> = ({ columns, data }) => {
   return (
     <TableContainer width="100%" mt={6}>
       <Table variant="simple" width="100%" {...getTableProps()}>
-        <TableCaption>Harvard Business School Campaigns</TableCaption>
+        <TableCaption></TableCaption>
         <Thead>
           <Tr>
             {headerGroups[0].headers.map((col) => (
@@ -141,34 +141,34 @@ const Manage = () => {
   const data = React.useMemo(
     () => [
       {
-        nft: "Finance Class of 2021",
-        type: "Diploma",
-        status: "152/174",
-        expires: "Soulbound",
+        nft: "State of Texas - EB I-95 Safety 23 ",
+        type: "Road Infrastructure",
+        status: "Draft Review",
+        expires: "02/23/2023",
         details: <Button colorScheme="#f8f8f800">🔍</Button>,
         burn: <Button colorScheme="#f8f8f800">🔥</Button>,
       },
       {
-        nft: "International Business Class of 2021",
-        type: "Diploma",
-        status: "85/103",
-        expires: "Soulbound",
+        nft: "City of Austin - Redwood Ave Expansion",
+        type: "Road Infrastructure",
+        status: "Approved",
+        expires: "03/15/2023",
         details: <Button colorScheme="#f8f8f800">🔍</Button>,
         burn: <Button colorScheme="#f8f8f800">🔥</Button>,
       },
       {
-        nft: "CPR Fall 2019 Class",
-        type: "Certification",
-        status: "23/23",
-        expires: "December 2024",
+        nft: "Greenly Park Funding - June 2024",
+        type: "Parks and Recreation",
+        status: "Provisioning",
+        expires: "01/01/2024",
         details: <Button colorScheme="#f8f8f800">🔍</Button>,
         burn: <Button colorScheme="#f8f8f800">🔥</Button>,
       },
       {
-        nft: "Harvard Class of 1998 Diplomas",
-        type: "Diploma",
-        status: "2/207",
-        expires: "Soulbound",
+        nft: "Subway Track Maintenance - January 2023",
+        type: "Rail Infrastructure",
+        status: "Verified",
+        expires: "Complete",
         details: <Button colorScheme="#f8f8f800">🔍</Button>,
         burn: <Button colorScheme="#f8f8f800">🔥</Button>,
       },
@@ -190,9 +190,9 @@ const Manage = () => {
     <>
       <Box mt={10}>
         <Container maxW="100%">
-          <Box bg="green.600" color="white" mb={8}>
+          <Box bg="green.600" color="white" mb={8} padding={8}>
             <Text fontSize="6xl" style={{ textAlign: "center" }}>
-              DELG Publisher Dashboard
+              DEL Publisher Dashboard
             </Text>
           </Box>
           <Flex>
