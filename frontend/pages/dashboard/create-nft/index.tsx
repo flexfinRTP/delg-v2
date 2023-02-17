@@ -42,13 +42,8 @@ const StyledFormLabel = styled(FormLabel, {
 });
 
 const Createnft = () => {
-  const { contractPublisher } = "0x";
-  console.log(
-    "🚀 ~ file: index.tsx:48 ~ Createnft ~ contractPublisher",
-    contractPublisher
-  );
-  const api =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDY4YzllNUVlYjg0OWY3NUNkQzdjMzhjOTUzYjEwYTVDZUIyRTU5Y0IiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTYyODY1MzQ0NzExOCwibmFtZSI6InBldGdyYW0ifQ.mhS4FK7akbSBrA_uFQoWnu4WyisY__k1DoXgyBIsorA";
+//   const api =
+//     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDY4YzllNUVlYjg0OWY3NUNkQzdjMzhjOTUzYjEwYTVDZUIyRTU5Y0IiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTYyODY1MzQ0NzExOCwibmFtZSI6InBldGdyYW0ifQ.mhS4FK7akbSBrA_uFQoWnu4WyisY__k1DoXgyBIsorA";
   const [image, setImage] = useState(null);
   const [imageName, setImageName] = useState(null);
   const [diplomaVerification, setDiplomaVerification] = useState(null);
@@ -61,61 +56,59 @@ const Createnft = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data: any) => {
-    console.log("data: ", data);
-    // TODO: Send data to backend or SC, await response and redirect to dashboard
-    try {
-      const obj = {
-        diploma: data.diploma ? data.diploma : "Bachelors",
-        diplomaDate: data.diplomaDate ? data.diplomaDate : "Dec 20 2021",
-        diplomaVerification: data.diplomaVerification
-          ? data.diplomaVerification
-          : "No",
-        documentType: data.documentType ? data.documentType : "Diploma",
-        gpa: data.gpa ? data.gpa : "3.5",
-        graduationDate: data.graduationDate
-          ? data.graduationDate
-          : "Dec 20 2021",
-        major: data.major ? data.major : "Computer Science",
-        minor: data.minor ? data.minor : "Business",
-        name: data.name ? data.name : "Joe Doe",
-        studentId: data.studentId ? data.studentId : "24235690",
-        walletId: data.walletId
-          ? data.walletId
-          : "0xf4eA652F5B7b55f1493631Ea4aFAA63Fe0acc57C",
-        image: image
-          ? image
-          : "http://edgarbarroso.net/wp-content/uploads/2010/04/Edgar_Barroso_Teaching.jpg",
-        transcript: transcript
-          ? transcript
-          : "https://www.nextdaydiplomas.com/images/products/High_School_Transcripts_01_Med.jpg",
-      };
+//   const onSubmit = async (data: any) => {
+//     console.log("data: ", data);
+//     // TODO: Send data to backend or SC, await response and redirect to dashboard
+//     try {
+//       const obj = {
+//         diploma: data.diploma ? data.diploma : "Bachelors",
+//         diplomaDate: data.diplomaDate ? data.diplomaDate : "Dec 20 2021",
+//         diplomaVerification: data.diplomaVerification
+//           ? data.diplomaVerification
+//           : "No",
+//         documentType: data.documentType ? data.documentType : "Diploma",
+//         gpa: data.gpa ? data.gpa : "3.5",
+//         graduationDate: data.graduationDate
+//           ? data.graduationDate
+//           : "Dec 20 2021",
+//         major: data.major ? data.major : "Computer Science",
+//         minor: data.minor ? data.minor : "Business",
+//         name: data.name ? data.name : "Joe Doe",
+//         studentId: data.studentId ? data.studentId : "24235690",
+//         walletId: data.walletId
+//           ? data.walletId
+//           : "0xf4eA652F5B7b55f1493631Ea4aFAA63Fe0acc57C",
+//         image: image
+//           ? image
+//           : "http://edgarbarroso.net/wp-content/uploads/2010/04/Edgar_Barroso_Teaching.jpg",
+//         transcript: transcript
+//           ? transcript
+//           : "https://www.nextdaydiplomas.com/images/products/High_School_Transcripts_01_Med.jpg",
+//       };
 
-      console.log("what is obj", obj);
+//       console.log("what is obj", obj);
 
-      const client = new NFTStorage({ token: api });
-      const metadata = await client.store({
-        name: data.name,
-        description: JSON.stringify(obj),
-        image: new File(["image"], "imageName", { type: "image/*" }),
-      });
-      console.log("metadata", metadata);
+//       const client = new NFTStorage({ token: api });
+//       const metadata = await client.store({
+//         name: data.name,
+//         description: JSON.stringify(obj),
+//         image: new File(["image"], "imageName", { type: "image/*" }),
+//       });
+//       console.log("metadata", metadata);
 
-      if (metadata) {
-        console.log("metadata URL", metadata?.url);
-        const url = metadata?.url.substring(7); //  bafyreifeiksc7pfbdex5fhes2inqdail7cvf3jfphugtpyzw4rpzte3rca/metadata.json
-        const fullUrl = `https://cloudflare-ipfs.com/ipfs/${url}`;
-        console.log("fullUrl", fullUrl);
-
-        const saveToContract = await contractPublisher.createNFT(fullUrl);
-        const tx = await saveToContract.wait();
-        console.log("tx", tx);
-        // history.push("/");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+//       if (metadata) {
+//         console.log("metadata URL", metadata?.url);
+//         const url = metadata?.url.substring(7); //  bafyreifeiksc7pfbdex5fhes2inqdail7cvf3jfphugtpyzw4rpzte3rca/metadata.json
+//         const fullUrl = `https://cloudflare-ipfs.com/ipfs/${url}`;
+//         console.log("fullUrl", fullUrl);
+//         // const tx = await saveToContract.wait();
+//         console.log("tx", tx);
+//         // history.push("/");
+//       }
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
 
   const handleImage = async (event: any) => {
     const updataData = new FormData();
@@ -132,7 +125,7 @@ const Createnft = () => {
         },
       }
     );
-    setImage("https://gateway.pinata.cloud/ipfs/" + res.data.IpfsHash);
+    // setImage("https://gateway.pinata.cloud/ipfs/" + res.data.IpfsHash);
   };
 
   const handleTranscript = async (event: any) => {
@@ -150,7 +143,7 @@ const Createnft = () => {
         },
       }
     );
-    setTranscript("https://gateway.pinata.cloud/ipfs/" + res.data.IpfsHash);
+    // setTranscript("https://gateway.pinata.cloud/ipfs/" + res.data.IpfsHash);
   };
 
   return (
@@ -194,7 +187,7 @@ const Createnft = () => {
                 type="file"
                 id="formFileImage"
                 onChange={handleImage}
-                defaultValue={imageName ? imageName : ""}
+                // defaultValue={imageName ? imageName : ""}
                 style={{ display: "none" }}
                 required
               />
@@ -210,7 +203,7 @@ const Createnft = () => {
                 type="file"
                 id="formFileTranscript"
                 onChange={handleTranscript}
-                defaultValue={transcript ? transcript : ""}
+                // defaultValue={transcript ? transcript : ""}
                 style={{ display: "none" }}
                 required
               />
@@ -408,7 +401,7 @@ const Createnft = () => {
               </Select>
             </StyledInputGroup>
 
-            <Button colorScheme="green" width="100%" marginTop={10} onClick={handleSubmit(onSubmit)}>
+            <Button colorScheme="green" width="100%" marginTop={10}>
               Create NFT
             </Button>
           </Container>
