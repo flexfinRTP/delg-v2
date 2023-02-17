@@ -410,10 +410,10 @@ const Createnft = () => {
         {/* LABELS */}
         <Box height="100%" w="100%">
           {image ? (
-            <Text fontSize="xl">Your Diploma</Text>
+            <Text fontSize="xl">Your Document</Text>
           ) : (
             <>
-              <Text fontSize="xl">Your diploma will display here</Text>
+              <Text fontSize="xl">Your document will display here</Text>
               <Image
                 src="/placeholder.png"
                 alt="description"
@@ -443,10 +443,10 @@ const Createnft = () => {
           <br />
 
           {transcript ? (
-            <Text fontSize="xl">Your Transcripts</Text>
+            <Text fontSize="xl">Your Supporting Documents</Text>
           ) : (
             <>
-              <Text fontSize="xl">Your Transcripts will display here</Text>
+              <Text fontSize="xl">Your Addtional Documents will display here</Text>
               <Image
                 src="/placeholder.png"
                 alt="description"
